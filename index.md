@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Welcome
-tagline: Daniel Ho Welcome 
+tagline: Daniel Ho Welcome it is using master instead 
 ---
 {% include JB/setup %}
 
