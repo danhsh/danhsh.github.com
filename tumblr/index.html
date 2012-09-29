@@ -64,8 +64,23 @@ font-family: 'Alice', serif; -->
     }
 
     .myTitle{
+      position: relative; right: 250px; top: 140px;
       font-family: 'Gentium Book Basic', serif;
     }
+
+    .titleRole {
+      position: relative; right: 250px; top: 110px;
+    }        
+
+    .titleDescription {
+      position: relative; right: 250px; top: 100px;
+      font-size: .5em;
+      margin-bottom: .5em;
+      font-family: 'Lustria', serif;
+      color: rgb(190, 190, 190);
+    }    
+    
+    
 
     .navBar { 
       color: #0066FF; 
@@ -138,18 +153,21 @@ font-family: 'Alice', serif; -->
     }
     
     h2 {
-      color: {color:Description};
+      /*color: {color:Description};*/
+      color: rgb(199, 0, 0);
       font-size: 1em;
+      font-family: 'Lustria', serif;
       margin-bottom: .5em;
     }
     
     h3 {
       font-size: 1.4em;
     }
-    
-    
+
+
     /* Content container */
-    #content {
+    #content {      
+      position: relative; top: -120px;
       margin: 1.5em auto 0;
       text-align: left;
       width: 35em;
@@ -431,6 +449,7 @@ font-family: 'Alice', serif; -->
     }
     
     #footer ul li {
+      color: rgb(190, 190, 190);
       display: inline;
       margin: 0.5em;
     }
@@ -471,10 +490,14 @@ font-family: 'Alice', serif; -->
   </style>
 </head>
 <body>
+
+        
+
     <div id="contain">     
       <div id="content">
-        <h1><div class="myTitle"><a href="/about">{Title}</a></div></h1>
-        <h2>{Description}</h2>
+        <div class="myTitle"><h1><a href="/about">{Title}</a></h1></div>
+        <div class="titleRole"><h2>{Description}</h2></div>
+        <div class="titleDescription"><p>Hydrogen.io © 2012</p></div>
 
         <div class="mediaBar">
         <a href="http://about.me/danhsh" target="_blank">
@@ -500,9 +523,9 @@ font-family: 'Alice', serif; -->
           {/block:HasPages} -->
           <!-- <li><a class="btn" href="#"><i class="icon-user"></i> About</a></li> -->
 
-           
+           <!-- 
           {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li> / {/block:AskEnabled}
-          {block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li> / {/block:SubmissionsEnabled} 
+          {block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li> / {/block:SubmissionsEnabled} --> 
     <!--       <div style="font-size: 24px;">
            <i class="icon-camera-retro"></i> icon-camera-retro
            </div> -->
@@ -690,7 +713,7 @@ font-family: 'Alice', serif; -->
           <!--   <li><a href="http://tumblr.com/">Tumblr</a> powered</li>
             <li><a href="http://danielhsh.tumblr.com/">Daniel Ho</a> designed</li>
             <li><a href="{RSS}">RSS</a> syndicated</li> -->
-            <li> Daniel Ho © 2012 </li>
+            <li> Daniel Ho @ Hydrogen.io © 2012 </li>
 
           </ul>       
         </div> <!-- end footer -->
