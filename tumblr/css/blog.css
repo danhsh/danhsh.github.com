@@ -1,0 +1,324 @@
+/*
+Copyright (c) 2011, Hydrogen.io. All rights reserved.
+Daniel Ho
+version: 1.0
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
+
+body {
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+    a {
+        text-decoration: none;
+    }
+
+    em, i {
+        font-style: italic;
+    }
+
+    .container {
+        margin: 0 auto 30px;
+        overflow: hidden;
+        padding: 0 30px;
+        width: 700px;
+    }
+
+    .posts {
+        float: left;
+        margin-top: 80px;
+        width: 550px;
+    }
+
+        .post {
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .post:last-child {
+            border: 0;
+        }
+
+            .post-content {
+                color: #4f4f4f;
+                width: 400px;
+            }
+
+                .post-title {
+                    color: #292929;
+                    font: 27px/1.15 HelveticaNeue-Light, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    margin-bottom: 1em;
+                    text-decoration: none;
+                }
+
+                .post-body {
+                    font-size: 116%;
+                    line-height: 1.466;
+                }
+
+                    .post-body p {
+                        line-height: 1.466;
+                        margin-bottom: 1.3em;
+                    }
+
+                        .post-body a {
+                            border-bottom: 1px solid #ccc;
+                            color: #292929;
+                        }
+
+                    .post-body img,
+                    .post-body iframe {
+                        max-width: 100%;
+                    }
+
+                    .post-body ul,
+                    .post-body ol {
+                        margin-left: 17px;
+                        margin-bottom: 1.3em;
+                    }
+
+                    .post-body ol {
+                        margin-left: 20px;
+                    }
+
+                        .post-body ol li {
+                            margin-bottom: 0.6em;
+                            list-style: decimal;
+                        }
+
+                        .post-body ul li {
+                            margin-bottom: 0.6em;
+                            list-style: disc;
+                        }
+
+            .post-meta {
+                position: absolute; bottom: 34px; right: 0;
+            }
+
+                .note-count {
+                    background: url('note-like.png') no-repeat 0 4px;
+                    clear: both;
+                    float: right;
+                    padding-left: 20px;
+                }
+
+                .post-date {
+                    clear: both;
+                    float: right;
+                    padding-top: 3px;
+                }
+
+            .post-meta,
+            .navigation {
+                color: #c6c6c6;
+                font-size: 116%;
+                font-weight: bold;
+            }
+
+                .post-meta a,
+                .navigation a {
+                    color: #c6c6c6;
+                }
+
+                .notes a:hover,
+                .post-meta a:hover,
+                .navigation a:hover {
+                    text-decoration: underline;
+                }
+
+                .navigation .links {
+                    overflow: hidden;
+                    margin-bottom: 30px;
+                }
+
+                .navigation .count {
+                    text-align: center;
+                }
+
+                .navigation .left {
+                    float: left;
+                }
+
+                .navigation .right {
+                    float: right;
+                }
+
+            .notes {
+                color: #a5a5a5;
+                font-size: 116%;
+                margin-top: -30px;
+                margin-bottom: 30px;
+            }
+
+            .notes a {
+                color: #3b3b3b;
+            }
+
+                .note {
+                    border-bottom: 1px solid #ebebeb;
+                    padding: 10px 0 10px 26px;
+                    line-height: 16px;
+                    position: relative;
+                }
+
+                .note .avatar {
+                    position: absolute; top: 10px; left: 0;
+                }
+
+    /* ----------------------------------------------------------
+       P A G E S   /   M E N U
+    ---------------------------------------------------------- */
+    .pages_menu {
+      float: left;
+      padding-top: 88px;
+      position: relative;
+      line-height: 1 !important;
+      width: 150px;
+    }
+    .pages_menu .path {
+      background: #f1f1f1;
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 5px;
+      height: 88px;
+    }
+    .pages_menu .logo {
+      background: url('../img/hydrogenLogoMain5.gif') no-repeat 0 0;
+      display: block;
+      margin-bottom: 50px;
+      text-indent: -999em;
+      width: 84px;
+      height: 84px;
+    }
+    .pages_menu .logo:active {
+      position: relative;
+      top: 1px;
+    }
+    .pages_menu .page-set {
+      width: 84px;
+    }
+    .pages_menu .page-set .page {
+      border-bottom: 1px solid #eff4f6;
+    }
+    .pages_menu .page-set .page.selected {
+      background: #fff;
+      border-color: #fff;
+      position: relative;
+      top: -1px;
+      margin: 0;
+    }
+    .pages_menu .page-set .page.selected a {
+      background: #414141;
+      border-top: 1px solid #fff;
+      -moz-border-radius: 14px;
+      -webkit-border-radius: 14px;
+      border-radius: 14px;
+      color: #fff;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .pages_menu .page-set .page:last-child {
+      border: 0;
+    }
+    .pages_menu .page-set a {
+      font-weight: bold;
+      display: block;
+      color: #69aaca;
+      padding: 6px 10px 8px;
+      position: relative;
+      text-decoration: none;
+    }
+    .pages_menu .page-set a:hover {
+      color: #337a9d;
+    }
+    .pages_menu .copyright {
+      font: 9px "Lucida Grande", "Lucida Sans", Tahoma, Arial, sans-serif;
+      margin-top: 25px;
+      color: #aeaeae;
+      margin-left: 10px;
+    }
+    /* --  Mobile  --------------------------------------- */
+    @media all and (max-width: 700px) {
+        .container {
+            width: auto;
+        }
+
+        .posts {
+            margin-top: 0;
+        }
+
+        .posts,
+        .post,
+        .post-content {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .post-meta {
+            overflow: hidden;
+            position: static;
+        }
+
+        .post-date {
+            clear: none;
+            float: left;
+        }
+
+      .pages_menu {
+        float: none;
+        padding: 50px 0 30px;
+        width: auto;
+      }
+      .pages_menu .path {
+        display: none;
+      }
+      .pages_menu .logo {
+        margin: 0 auto 35px;
+      }
+      .pages_menu .page-set {
+        margin: 0 -10px;
+        text-align: center;
+        width: auto;
+      }
+      .pages_menu .page-set .page {
+        border: 0;
+        display: inline-block;
+        margin: 0 5px;
+        position: static;
+      }
+      .pages_menu .page-set a {
+        padding: 6px 4px 8px;
+        position: static;
+      }
+      .pages_menu .copyright {
+        display: none;
+      }
+    }
+    /* --  Retina Images  ---------------------------- */
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      .pages_menu .logo {
+        background-image: url('../img/hydrogenLogoMain5.gif');
+        background-size: contain;
+      }
+    }
+
+    .mediaBar { 
+      margin-top: 20px;
+      /*margin-left: 30px;*/
+      margin-right: 50px;
+      text-align: center;
+      width: auto;       
+      /*color: #0066FF; */
+      /*position: relative; right: -310px; top: -10px;*/
+      /*font-size: 14px; */
+    } 
+
