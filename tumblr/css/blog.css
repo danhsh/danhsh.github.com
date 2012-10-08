@@ -313,9 +313,11 @@ body {
 
     .mediaBar { 
       margin-top: 20px;
+      margin: 0 -10px;
       /*margin-left: 30px;*/
-      margin-right: 50px;
+      /*margin-right: 50px;*/
       text-align: center;
+      /*text-align: center;*/
       width: auto;       
       /*color: #0066FF; */
       /*position: relative; right: -310px; top: -10px;*/
