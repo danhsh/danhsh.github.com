@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Daniel Ho @ Hyodrogen</title>
+    <title>Daniel Ho @ Hydrogen</title>
     <!-- Bootstrap -->
     <link href="http://danhsh.github.com/tumblr/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://danhsh.github.com/tumblr/css/blog.css" type="text/css" media="all" />
@@ -23,8 +23,6 @@
       <li class="page"><a href="http://blog.hydrogen.io/archive">
         <!-- <i class="icon-folder-close"></i> -->
          {lang:Archive}</a></li>    
-      <!-- <li class="page"><a href="http://service.hydrogen.io/" rel="external">Questions</a></li> -->
-      <!-- <li class="page"><a href="http://blog.hydrogen.io/jobs" rel="external">Jobs</a></li> -->
     </ul>
 
         <div class="mediaBar">
@@ -50,21 +48,9 @@
 
     <p class="copyright">Daniel Ho <br>Hydrogen.io 2012</p>
     </div><!-- pages_menu -->
-
-
-<!-- start daniel -->
-
-                
                 <div class="posts">
                 {block:Posts}
-                  <!--  <div id="post-{PostID}" class="post {block:Text}post-type-text{/block:Text}{block:Photo}post-type-photo{/block:Photo}{block:Photoset}post-type-photoset{/block:Photoset}{block:Quote}post-type-quote{/block:Quote}{block:Link}post-type-link{/block:Link}{block:Chat}post-type-chat{/block:Chat}{block:Video}post-type-video{/block:Video}{block:Audio}post-type-audio{/block:Audio}"> -->
-                     <!-- </div>.type -->
                     <div class="post">
-                            
-                          <!--   
-                            <a href="{Permalink}" class="post-title">{block:Text}Text{/block:Text}{block:Photo}Photo{/block:Photo}{block:Photoset}Photoset{/block:Photoset}{block:Quote}Quote{/block:Quote}{block:Link}Link{/block:Link}{block:Chat}Chat{/block:Chat}{block:Video}Video{/block:Video}{block:Audio}Audio{/block:Audio}</a>
-                                <div class="clear"></div> -->
-                                
                            
                         <div class="post-content">
                         
@@ -168,23 +154,12 @@
                         
                         
                         {block:Video}
-                      <!--      <div class="video-wrap">{Video-500}</div>
                             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}-->
                             
                             <div>{Video-500}</div>
                             {block:Caption}<div>{Caption}</div>{/block:Caption}                            
                             
                         {/block:Video}
-                        
-                        
-                        
-                        <!--{block:HasTags}
-                            <div class="tags">
-                                Tags: {block:Tags}<a href="{TagURL}" class="single-tag">{Tag}</a> {/block:Tags}
-                            </div>
-                        {/block:HasTags} -->
-                  
-
                         
                         </div><!-- post-content -->
                         
@@ -205,57 +180,9 @@
                         {/block:Date}
                         
                         
-                        
-                       <!-- {block:IfDisqusShortname}
-                            <div class="comments">
-                                <a href="{Permalink}#disqus_thread">0 comments</a>
-                            </div>
-                        {/block:IfDisqusShortname} -->                                            
-                        
-
                         </div><!-- .post-meta -->
                         
-                        
-                        
-                        <!--
-                        {block:IfShowShareThisPostLinks}{block:PermalinkPage}
-                        <div class="share-this-post">
-                            <div class="facebook-button"><fb:like layout="standard" show_faces="false" width="450" action="like" colorscheme="light"></fb:like></div>
-                            <div class="tweetmeme-button"><script type="text/javascript">tweetmeme_style = 'compact';</script><script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script></div>
-                        </div>
-                        {/block:PermalinkPage}{/block:IfShowShareThisPostLinks}
-                        -->
-                        
                     </div><!-- .post -->
-                    
-        
-                    
-                    
-                <!--    
-                {block:PermalinkPage}
-                    <div class="post-footer">
-                        <div class="author">Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a></div>
-                        <div class="shorturl"><a href="{ShortURL}">&infin; Short URL</a></div>
-                    </div>
-                {/block:PermalinkPage}
-                -->
-                
-                
-                
-                <!--
-                    {block:IfDisqusShortname}{block:Permalink}
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                    {/block:Permalink}{/block:IfDisqusShortname}
-                    
-                    -->
-                    
-                    
-                    <!--
-                    {block:PostNotes}<div id="post-notes">{PostNotes}</div>{/block:PostNotes}
-                    -->
-                    
                     
                 {/block:Posts}
                 
@@ -266,8 +193,6 @@
                 {block:Pagination}
                     <div class="column right">
                       <div class="navigation">
-                        <!-- <span class="archive"><a href="/archive">Archive</a></span> -->
-                        <!-- <span class="random"><a href="/random">Random</a></span> -->
                         <div class="count">{CurrentPage} of {TotalPages}</div>
 
                         {block:NextPage}
@@ -292,128 +217,6 @@
                 <!-- #content -->
             </div><!-- #container -->
 
-
-<!--
-            {block:IndexPage}
-            <div class="sidebar">
-            {block:IfShowAboutWidget}
-                <div id="about" class="widget">
-                    <h3>About</h3>
-                    <a href="http://www.tumblr.com/follow/{Name}"><img src="{PortraitURL-64}" alt="portrait" /></a>
-                    {block:Description}<div class="description"><p>{Description}</p></div>{/block:Description}
-                </div>
-            {/block:IfShowAboutWidget}
-			{block:IfShowStuffILikeWidget}{block:Likes}
-                <div id="stuff-i-like" class="widget carousel">
-                    <h3>Stuff I like <a href="http://www.tumblr.com/liked/by/{Name}">(all)</a></h3>
-                    {Likes limit="9" width="180"}
-                    <div class="carousel-navigation">
-                        <button class="prev"><<</button>
-                        <button class="next">>></button>
-                    </div>
-                </div>
-            {/block:Likes}{/block:IfShowStuffILikeWidget}
-            {block:IfShowLatestTweetsWidget}{block:Twitter}
-                <div id="latest-tweets" class="widget">
-                    <h3>Latest Tweets <a href="http://twitter.com/{TwitterUsername}">(follow)</a></h3>
-                    <ul id="tweets"></ul>
-                </div>
-
-                <script type="text/javascript">
-                    function recent_tweets(data) {
-                        for (i=0; i<data.length; i++) {
-                            if (i<{text:Number of Tweets}) {
-                                document.getElementById("tweets").innerHTML = 
-                                    document.getElementById("tweets").innerHTML + 
-                                    '<li class="tweet">' + data[i].text + '</li>';
-                            }
-                        }
-                        document.getElementById("twitter").style.display = 'block';
-                    }
-                </script>
-            {/block:Twitter}{/block:IfShowLatestTweetsWidget}
-            {block:IfShowPeopleIFollowWidget}{block:Following}
-                <div id="people-i-follow" class="widget">
-                    <h3>People I follow</h3>
-                    <ul>
-                        {block:Followed}
-                            <li><a href="{FollowedURL}"><img src="{FollowedPortraitURL-30}" alt="{FollowedName}"/></a></li>
-                        {/block:Followed}
-                    </ul>
-                </div>
-            {/block:Following}{/block:IfShowPeopleIFollowWidget}
-            </div>
-            {/block:IndexPage}
--->
-
-
-
-<!-- 
-        </div>
-        <div id="footer">
-            <div class="copyright">&copy; <a href="/">{Title}</a>. All Rights Reserved.</div>
-            <div class="colophon"></div>
-        </div>
-    </div> -->
-
-
-<!--
-{block:Twitter}<script type="text/javascript" src="/tweets.js"></script>{/block:Twitter}
--->
-
-<!-- 
-{block:IfShowShareThisPostLinks}{block:PermalinkPage}
-    <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({appId: 'your app id', status: true, cookie: true, xfbml: true});
-        };
-        (function() {
-            var e = document.createElement('script'); e.async = true;
-            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-            document.getElementById('fb-root').appendChild(e);
-        }());
-    </script>
-{/block:PermalinkPage}{/block:IfShowShareThisPostLinks}
--->
-
-<!-- 
-{block:IfDisqusShortname}
-    <script type="text/javascript">
-        //<![CDATA[
-        (function() {
-            var links = document.getElementsByTagName('a');
-            var query = '?';
-            for(var i = 0; i < links.length; i++) {
-                if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                }
-            }
-            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-        })();
-        //]]>
-    </script>
-{/block:IfDisqusShortname}
--->
-
-<!-- 
-{block:IfShowStuffILikeWidget}
-    <script type="text/javascript">
-        $(function() {
-            $(".carousel").jCarouselLite({
-                btnNext: ".next",
-                btnPrev: ".prev",
-                scroll: 3
-            });
-        });
-    </script>
-{/block:IfShowStuffILikeWidget}
--->
-
-
-<!--{block:IfGoogleAnalyticsID}{block:IfGoogleAnalyticsID}-->
-
-<!-- start daniel end-->
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="http://danhsh.github.com/tumblr/js/bootstrap.min.js"></script>
