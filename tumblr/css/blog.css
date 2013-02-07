@@ -27,13 +27,13 @@ body {
         margin: 0 auto 30px;
         overflow: hidden;
         padding: 0 30px;
-        width: auto;
+        width: 1280px;
     }
 
     .posts {
         float: left;
         margin-top: 80px;
-        width: 550px;
+        width: 1130px;
     }
 
         .post {
