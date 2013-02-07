@@ -27,13 +27,13 @@ body {
         margin: 0 auto 30px;
         overflow: hidden;
         padding: 0 30px;
-        width: 1280px;
+        width: 1024px;
     }
 
     .posts {
         float: left;
         margin-top: 80px;
-        width: 1130px;
+        width: 874px;
     }
 
         .post {
@@ -49,7 +49,7 @@ body {
 
             .post-content {
                 color: #4f4f4f;
-                width: 980px;
+                width: 724px;
             }
 
                 .post-title {
