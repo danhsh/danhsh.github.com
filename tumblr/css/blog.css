@@ -27,7 +27,7 @@ body {
         margin: 0 auto 30px;
         overflow: hidden;
         padding: 0 30px;
-        width: 700px;
+        width: auto;
     }
 
     .posts {
