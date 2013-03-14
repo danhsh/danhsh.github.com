@@ -114,6 +114,7 @@ body {
                     clear: both;
                     float: right;
                     padding-top: 3px;
+                    padding: 50px 30px 30px;
                 }
 
             .post-meta,
@@ -271,7 +272,7 @@ body {
         .post-date {
             clear: none;
             float: left;
-            padding: 50px 10px 30px;
+            padding: 50px 30px 30px;
         }
 
       .pages_menu {
