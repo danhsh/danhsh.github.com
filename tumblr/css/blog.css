@@ -27,13 +27,13 @@ body {
         margin: 0 auto 30px;
         overflow: hidden;
         padding: 0 30px;
-        width: 1024px;
+        width: 1124px;
     }
 
     .posts {
         float: left;
         margin-top: 80px;
-        width: 874px;
+        width: 174px;
     }
 
         .post {
@@ -115,7 +115,7 @@ body {
                     float: right;
                     padding-top: 3px;
                     padding: 0px 10px 0px;
-                    right: -30px;
+                    right: -40px;
                 }
 
             .post-meta,
@@ -274,7 +274,7 @@ body {
             clear: none;
             float: left;
             padding: 0px 10px 0px;
-            right: -30px;
+            right: -40px;
         }
 
       .pages_menu {
