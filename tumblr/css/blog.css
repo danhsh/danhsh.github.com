@@ -115,6 +115,7 @@ body {
                     float: right;
                     padding-top: 3px;
                     padding: 0px 10px 0px;
+                    right: -30px;
                 }
 
             .post-meta,
@@ -273,6 +274,7 @@ body {
             clear: none;
             float: left;
             padding: 0px 10px 0px;
+            right: -30px;
         }
 
       .pages_menu {
